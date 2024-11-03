@@ -39,7 +39,7 @@ void main(){
     }
     fscanf(fp1,"%s%s%s",label,opcode,operand);
     while(strcmp(opcode,"END")!=0){
-        fprintf(fp3,"\n%x\t%s\t%s\t%s",locctr,label,opcode,operand);
+        fprintf(fp3,"\n%X\t%s\t%s\t%s",locctr,label,opcode,operand);
         if(strcmp(label,"**")!=0){
             for(i=0;i<=symtab_size;i++){
                 if(strcmp(sym[i].label,label)==0){
@@ -85,9 +85,9 @@ void main(){
         }
         fscanf(fp1,"%s%s%s",label,opcode,operand);
     }
-    fprintf(fp3,"\n%x\t%s\t%s\t%s",locctr,label,opcode,operand);
-    printf("length=>%x\n",locctr-start);
-    fprintf(fp5,"%x",locctr-start);
+    fprintf(fp3,"\n%X\t%s\t%s\t%s",locctr,label,opcode,operand);
+    printf("length=>%X\n",locctr-start);
+    fprintf(fp5,"%X",locctr-start);
     fclose(fp1);
     fclose(fp3);
     fclose(fp4);
