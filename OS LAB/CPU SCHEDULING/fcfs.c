@@ -26,7 +26,9 @@ void main(){
         min=-1;
         for(i=0;i<n;i++){
             if(p[i].at<=time && p[i].visited==0){
-                if(min==-1 || p[i].at<p[min].at){
+                if(min==-1 || p[i].at<p[min].at){ /*the code is same for fcfs,sjf,priority scheduling except this if condition
+                                                    for sjf we use if(min==-1 || p[i].bt<p[min].bt)
+                                                    for priority we use if(min==-1 || p[i].priority<p[min].priority)*/
                     min=i;
                 }
             }
