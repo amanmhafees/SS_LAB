@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 
 struct process{
@@ -26,7 +27,7 @@ void main(){
         min=-1;
         for(i=0;i<n;i++){
             if(p[i].at<=time && p[i].visited==0){
-                if(min==-1 || p[i].at<p[min].at){
+                if(min==-1 || p[i].bt<p[min].bt){
                     min=i;
                 }
             }
